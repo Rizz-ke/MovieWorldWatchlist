@@ -2,4 +2,4 @@
 
 # Date, 2024/06/17
 
-# By \*Wafiq Moham
+# By \*Wafiq Mohame
