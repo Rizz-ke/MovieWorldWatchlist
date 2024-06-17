@@ -6,4 +6,4 @@
 
 # Description
 
-"Movie World," is an online website 
+"Movie World," is an online website designed to list a variety of movies 
