@@ -6,4 +6,4 @@
 
 # Description
 
-Welcome to the Movie Watchlist
+Welcome to the Movie Watchlist Application!
