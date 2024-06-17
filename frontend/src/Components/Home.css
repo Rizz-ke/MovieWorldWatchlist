@@ -1,0 +1,69 @@
+/* Full-width Carousel */
+.full-width-carousel {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.carousel .carousel-item {
+  height: 80vh;
+}
+
+.carousel .carousel-item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-container {
+  margin-bottom: 20px;
+}
+
+.row.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+}
+
+/* Custom Background for Home Component */
+.home-background {
+  background-image: url('https://images.pexels.com/photos/719396/pexels-photo-719396.jpeg?auto=compress&cs=tinysrgb&w=600'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 50px; /* Adjust the height to your liking */
+}
+
+.footer::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.footer p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ccc;
+}

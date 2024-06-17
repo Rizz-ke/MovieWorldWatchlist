@@ -1,0 +1,67 @@
+/* Navbar.css */
+
+/* Body styles for full page coverage */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Navbar styles */
+.navbar {
+  background: url('https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center;
+  background-size: cover; /* Ensure the background image covers the entire navbar */
+  position: fixed; /* Ensure navbar stays at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3000; /* Ensure navbar stays on top of other content */
+  padding: 1rem 0; /* Add vertical padding */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  color: #fff; /* Text color */
+  padding-left: 20px; /* Add padding for logo and text */
+}
+
+.navbar-brand .logo-img {
+  max-height: 50px; /* Adjust the height of your logo */
+  margin-right: 10px; /* Space between logo and text */
+}
+
+.welcome-text {
+  flex-grow: 1; /* Make the welcome text take up available space */
+  text-align: center; /* Center the text */
+  font-size: 1.9rem;
+  color: white;
+  font-weight: bolder;
+}
+
+.navbar-nav .nav-link {
+  color: #fff; /* Text color */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.8); /* Hover color */
+}
+
+/* Carousel container and item styles */
+.carousel-container {
+  position: relative;
+  height: calc(100vh - 56px); /* Adjusted height to accommodate navbar */
+  overflow: hidden; /* Hide overflow */
+}
+
+.carousel-item {
+  width: 100%; /* Ensure items fill the container width */
+  height: 100%; /* Ensure items fill the container height */
+}
+
+.carousel-item img {
+  height: 100%; /* Ensure images cover the item */
+  width: 100%; /* Ensure images fill the item */
+  object-fit: cover; /* Maintain aspect ratio */
+}

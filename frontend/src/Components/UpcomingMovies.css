@@ -1,0 +1,61 @@
+.movies-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url('https://images.pexels.com/photos/719396/pexels-photo-719396.jpeg?auto=compress&cs=tinysrgb&w=600'); /* Replace 'background.jpg' with your actual image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    --main-color: #000;
+    --submain-color: #78858F;
+    --bg-color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background: var(--bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Example hover effect */
+}
+
+.card-image {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-content {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.card-title {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.card-year, .card-genre {
+    font-size: 1rem;
+    color: var(--submain-color);
+}

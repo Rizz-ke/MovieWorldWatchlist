@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #141414;
+  color: wheat;
+}
+
+.container {
+  max-width: 600px;
+}
+
+h1, h2 {
+  color: #fff;
+}
+
+a {
+  color: #e50914;
+}
+
+a:hover {
+  color: #f40612;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: #e50914;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #f40612;
+}

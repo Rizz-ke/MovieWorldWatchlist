@@ -1,0 +1,38 @@
+.movie-card {
+    width: 250px; /* Fixed width for all cards */
+    height: 400px; /* Fixed height for all cards */
+    margin: 10px; /* Add margin between cards */
+    display: inline-block; /* Ensure cards align horizontally */
+    overflow: hidden; /* Ensure images do not overflow */
+  }
+  
+  .genre-section {
+    margin-bottom: 20px; /* Add space between genre sections */
+  }
+  
+  .card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 60%; /* Adjust as needed */
+    object-fit: cover; /* Ensure images maintain aspect ratio and cover the entire space */
+  }
+  
+  .card-body {
+    height: 40%; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Adjust specific genres */
+  .genre-section.thriller .movie-card,
+  .genre-section.fantasy .movie-card {
+    width: 500px;
+    height: 1000px;
+  }
+  

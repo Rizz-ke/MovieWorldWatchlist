@@ -1,0 +1,52 @@
+.login-background {
+    background: url('/src/assets/images/moviebackground3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-container {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 60px 68px 40px;
+    border-radius: 8px;
+    max-width: 450px;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+  
+  .login-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    background-color: #333;
+    border: none;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .form-control:focus {
+    background-color: #444;
+    color: white;
+  }
+  
+  .btn-primary {
+    background-color: yellowgreen;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: yellowgreen;
+  }
+  
+  .login-container a {
+    color: yellowgreen;
+  }
+  
+  .login-container a:hover {
+    color:yellowgreen;
+  }
+  

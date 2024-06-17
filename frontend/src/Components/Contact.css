@@ -1,0 +1,105 @@
+/* Contact.css */
+.contact-content-container {
+  margin-top: 56px; /* Adjust as needed to create space below the navbar */
+  padding-bottom: 50px; /* Ensure there's enough space at the bottom */
+  position: relative; /* Ensure proper positioning */
+  z-index: 1; /* Ensure contact section is above other content */
+}
+
+.contact-container {
+  padding: 50px 0;
+  background-image: url('https://img.freepik.com/premium-photo/3d-cinema-movie-film-entertainment-concept_356415-2342.jpg?size=626&ext=jpg&ga=GA1.1.1700018126.1718547490&semt=ais_user');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.contact-item {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.contact-icon {
+  color: #007bff;
+}
+
+.contact-info {
+  font-weight: bold;
+  color: #000;
+}
+
+.feedback-form {
+  background-color: rgba(249, 249, 249, 0.8);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.feedback-form form {
+  margin-top: 20px;
+}
+
+.feedback-form .form-control {
+  margin-bottom: 15px;
+}
+
+.feedback-form button {
+  margin-top: 15px;
+}
+
+.additional-info {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.additional-info p {
+  margin-bottom: 5px;
+}
+
+.additional-info p:first-child {
+  margin-top: 0;
+}
+
+.social-link {
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #007bff;
+}
+
+.facebook-icon {
+  color: #1877f2;
+}
+
+.twitter-icon {
+  color: #1da1f2;
+}
+
+.instagram-icon {
+  color: #e4405f;
+}
+
+@media (max-width: 768px) {
+  .contact-item {
+    margin-bottom: 20px;
+  }
+}
