@@ -11,3 +11,7 @@ Welcome to the Movie Watchlist Application! This Project, developed by Wafiq Moh
 # installation
 
 git clone to download the documents in GitHub
+
+# Technologies used 
+
+Python
