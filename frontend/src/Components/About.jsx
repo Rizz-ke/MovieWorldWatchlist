@@ -14,7 +14,7 @@ const About = () => {
       
     ];
 
-    setWords(wordsArray.);
+    setWords(wordsArray);
     setCurrentWord('');
     setTyping(true);
   }, []);
