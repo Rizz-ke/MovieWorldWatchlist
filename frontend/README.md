@@ -6,4 +6,4 @@
 
 # Description
 
-Welcome to the Movie Watchlist Application! This Project, developed by Wafiq Mohamed, 
+Welcome to the Movie Watchlist Application! This Project, developed by Wafiq Mohamed, utilizes 
