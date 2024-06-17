@@ -15,3 +15,4 @@ git clone to download the documents in GitHub
 # Technologies used 
 
 Python
+FastAPI
