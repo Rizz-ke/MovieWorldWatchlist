@@ -15,6 +15,7 @@ git clone to download the documents in GitHub
 # Technologies used 
 
 Python
+JavaScript
 FastAPI
 React
 Css
