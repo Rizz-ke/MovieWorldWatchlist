@@ -6,4 +6,4 @@
 
 # Description
 
-Welcome to the Movie Watchlist Application! This Project, developed by Wafiq Mohamed, utilizes FastAPI for the backend and React for the frontend. Users can manage their movie watchlists, view movies by genre, and stay updated on upcoming releases
+Welcome to the Movie Watchlist Application! This Project, developed by Wafiq Mohamed, utilizes FastAPI for the backend and React for the frontend. Users can manage their movie watchlists, view movies by genre, and stay updated on upcoming releases.
