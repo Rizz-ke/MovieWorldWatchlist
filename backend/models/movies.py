@@ -1,22 +1,117 @@
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from typing import List, Optional
+import sqlite3
 
-app = FastAPI()
+class Movie:
+    TABLE_NAME = 'movies'
 
-# In-memory movie storage
-movies = []
+    def __init__(self, title, year, genre, image=None):
+        self.id = None
+        self.title = title
+        self.year = year
+        self.genre = genre
+        self.image = image
 
-# Model for Movie
-class Movie(BaseModel):
-    title: str
-    year: int
-    genre: str
-    image: Optional[str] = None
+    def save(self):
+        conn, cursor = create_connection()
+        sql = f"""
+        INSERT INTO {self.TABLE_NAME} (title, year, genre, image)
+        VALUES (?,?,?,?)
+        """
+        try:
+            cursor.execute(sql, (self.title, self.year, self.genre, self.image))
+            conn.commit()
+            self.id = cursor.lastrowid
+            print(f"Inserted movie '{self.title}' with ID: {self.id}")
+        except sqlite3.IntegrityError as e:
+            print(f"Error: {e}")
+        finally:
+            conn.close()
 
-# Add your movie data
-movies_data = [
-    {
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'title': self.title,
+            'year': self.year,
+            'genre': self.genre,
+            'image': self.image
+        }
+
+    @classmethod
+    def get_all(cls):
+        conn, cursor = create_connection()
+        sql = f"""
+        SELECT * FROM {cls.TABLE_NAME}
+        """
+        cursor.execute(sql)
+        rows = cursor.fetchall()
+        conn.close()
+        return [cls.row_to_instance(row) for row in rows]
+
+    @classmethod
+    def row_to_instance(cls, row):
+        if row is None:
+            return None
+        movie = cls(title=row[1], year=row[2], genre=row[3], image=row[4])
+        movie.id = row[0]
+        return movie
+
+    @classmethod
+    def create_table(cls):
+        conn, cursor = create_connection()
+        sql_create = f"""
+        CREATE TABLE IF NOT EXISTS {cls.TABLE_NAME} (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            title TEXT NOT NULL,
+            year INTEGER NOT NULL,
+            genre TEXT NOT NULL,
+            image TEXT
+        )
+        """
+        try:
+            cursor.execute(sql_create)
+            conn.commit()
+            print(f"Table '{cls.TABLE_NAME}' created successfully.")
+        except sqlite3.Error as e:
+            print(f"Error creating table: {e}")
+        finally:
+            conn.close()
+
+    @classmethod
+    def get_by_id(cls, movie_id):
+        conn, cursor = create_connection()
+        sql = f"SELECT * FROM {cls.TABLE_NAME} WHERE id =?"
+        cursor.execute(sql, (movie_id,))
+        row = cursor.fetchone()
+        conn.close()
+        return cls.row_to_instance(row)
+
+    @classmethod
+    def get_by_title(cls, title):
+        conn, cursor = create_connection()
+        sql = f"SELECT * FROM {cls.TABLE_NAME} WHERE title =?"
+        cursor.execute(sql, (title,))
+        row = cursor.fetchone()
+        conn.close()
+        return cls.row_to_instance(row) if row else None
+
+    @classmethod
+    def delete_by_id(cls, movie_id):
+        conn, cursor = create_connection()
+        sql = f"DELETE FROM {cls.TABLE_NAME} WHERE id =?"
+        cursor.execute(sql, (movie_id,))
+        conn.commit()
+        conn.close()
+
+def create_connection():
+    conn = sqlite3.connect("movies.db")
+    return conn, conn.cursor()
+
+def initialize_database():
+    Movie.create_table()
+    insert_initial_movies()
+
+def insert_initial_movies():
+    movies_data = [
+           {
         
         "title": "The Fall Guy",
         "year": 2024,
@@ -296,50 +391,19 @@ movies_data = [
         "genre": "Horror",
         "image": "https://i.goojara.to/mb_225_225005.jpg"
     }
-]
+    ]
 
-
-# Add movies data to in-memory storage
-for movie_data in movies_data:
-    movies.append(Movie(**movie_data))
-
-# Create a movie
-@app.post("/movies/", response_model=Movie)
-def create_movie(movie: Movie):
-    movies.append(movie)
-    return movie
-
-# Retrieve all movies
-@app.get("/movies/", response_model=List[Movie])
-def read_movies():
-    return movies
-
-# Retrieve a movie by index
-@app.get("/movies/{movie_id}", response_model=Movie)
-def read_movie(movie_id: int):
-    try:
-        return movies[movie_id]
-    except IndexError:
-        raise HTTPException(status_code=404, detail="Movie not found")
-
-# Update a movie
-@app.put("/movies/{movie_id}", response_model=Movie)
-def update_movie(movie_id: int, movie: Movie):
-    try:
-        movies[movie_id] = movie
-        return movie
-    except IndexError:
-        raise HTTPException(status_code=404, detail="Movie not found")
-
-# Delete a movie
-@app.delete("/movies/{movie_id}", response_model=Movie)
-def delete_movie(movie_id: int):
-    try:
-        deleted_movie = movies.pop(movie_id)
-        return deleted_movie
-    except IndexError:
-        raise HTTPException(status_code=404, detail="Movie not found")
+    for movie_data in movies_data:
+        movie = Movie(
+            title=movie_data["title"],
+            year=movie_data["year"],
+            genre=movie_data["genre"],
+            image=movie_data["image"]
+        )
+        if not Movie.get_by_title(movie.title):
+            movie.save()
+        else:
+            print(f"Movie '{movie.title}' already exists.")
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    initialize_database()
