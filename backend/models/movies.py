@@ -115,14 +115,14 @@ def insert_initial_movies():
         
         "title": "The Fall Guy",
         "year": 2024,
-        "genre": "Action, Comedy, Drama",
+        "genre": "Action",
         "image": "https://i.pinimg.com/736x/c2/93/8e/c2938eea3c9b81a0feddd24d82edf161.jpg"
     },
     {
         
         "title": "Atlas",
         "year": 2024,
-        "genre": "Action, Adventure, Drama",
+        "genre": "Action",
         "image": "https://i.goojara.to/mb_229_229575.jpg"
     },
     {
@@ -143,147 +143,147 @@ def insert_initial_movies():
         
         "title": "Mission: Impossible – Dead Reckoning Part One",
         "year": 2023,
-        "genre": "Action, Adventure, Thriller",
+        "genre": "Action",
         "image": "https://i.pinimg.com/564x/a9/8c/b6/a98cb6d14371d1978ccefb838c505798.jpg"
     },
     {
        
         "title": "The Marvels",
         "year": 2023,
-        "genre": "Action, Adventure, Fantasy",
+        "genre": " Fantasy",
         "image": "https://i.pinimg.com/564x/96/42/33/9642338bc05e332a644973975cb2b714.jpg"
     },
     {
        
         "title": "Guardians of the Galaxy Vol. 3",
         "year": 2023,
-        "genre": "Action, Adventure, Comedy",
+        "genre": " Comedy",
         "image": "https://i.pinimg.com/564x/69/32/1a/69321a161eb9383ec02a7b1dca141a28.jpg"
     },
     {
         
         "title": "John Wick: Chapter 4",
         "year": 2023,
-        "genre": "Action, Crime, Thriller",
+        "genre": "Action",
         "image": "https://i.pinimg.com/564x/5b/c6/2a/5bc62a7bcd1ca0e3b755ad8756857802.jpg"
     },
     {
         
         "title": "The Flash",
         "year": 2023,
-        "genre": "Action, Adventure, Fantasy",
+        "genre": " Fantasy",
         "image": "https://i.pinimg.com/564x/70/dd/60/70dd60deb53fb34cc7ef2c28ffb14005.jpg"
     },
     {
         
         "title": "Indiana Jones and the Dial of Destiny",
         "year": 2023,
-        "genre": "Action, Adventure",
+        "genre": " Adventure",
         "image": "https://i.pinimg.com/564x/c9/43/9e/c9439ee778dfe060aca0bd04bf7f0865.jpg"
     },
     {
        
         "title": "Aquaman and the Lost Kingdom",
         "year": 2023,
-        "genre": "Action, Adventure, Fantasy",
+        "genre": "Action",
         "image": "https://i.pinimg.com/564x/3d/57/f4/3d57f4099776444ab365fc82e55386cb.jpg"
     },
     {
         
         "title": "Spider-Man: Across the Spider-Verse",
         "year": 2023,
-        "genre": "Animation, Action, Adventure",
+        "genre": "Animation",
         "image": "https://i.pinimg.com/736x/f3/1e/12/f31e1230a68817d9b8baf4297b7ad5ec.jpg"
     },
     {
         
         "title": "Transformers: Rise of the Beasts",
         "year": 2023,
-        "genre": "Action, Adventure, Sci-Fi",
+        "genre": " Sci-Fi",
         "image": "https://i.pinimg.com/564x/fe/a5/a9/fea5a9d2d259a2d4fe39aef2a1e57be5.jpg"
     },
     {
         
         "title": "Wonka",
         "year": 2023,
-        "genre": "Adventure, Comedy, Family",
+        "genre": "Adventure",
         "image": "https://i.pinimg.com/564x/72/c5/dd/72c5dd66d01f56712d5b5b303c26ebac.jpg"
     },
     {
         
         "title": "Oppenheimer",
         "year": 2023,
-        "genre": "Biography, Drama, History",
+        "genre": " Drama",
         "image": "https://i.pinimg.com/564x/16/3a/f3/163af33dafe4fb877483ab1ddd8a0d2e.jpg"
     },
     {
         
         "title": "The Hunger Games: The Ballad of Songbirds & Snakes",
         "year": 2023,
-        "genre": "Action, Adventure, Drama",
+        "genre": " Drama",
         "image": "https://i.pinimg.com/564x/6f/f4/34/6ff434b2ec6a46a82e38a0e74c4d87b5.jpg"
     },
     {
        
         "title": "Barbie",
         "year": 2023,
-        "genre": "Adventure, Comedy, Fantasy",
+        "genre": "Comedy",
         "image": "https://i.pinimg.com/564x/60/76/6d/60766d2782ae8cea2756ea2a6ad542fd.jpg"
     },
     {
         
         "title": "The Little Mermaid",
         "year": 2023,
-        "genre": "Adventure, Family, Fantasy",
+        "genre": "Adventure",
         "image": "https://i.pinimg.com/564x/8e/fa/8a/8efa8a7ed972b926eb9ce7e5e1b1d6b0.jpg"
     },
     {
         
         "title": "Fast X",
         "year": 2023,
-        "genre": "Action, Adventure, Crime",
+        "genre": " Crime",
         "image": "https://i.pinimg.com/564x/9c/59/20/9c5920d5720d7ba34ebf02096d6cc94e.jpg"
     },
     {
         
         "title": "Elemental",
         "year": 2023,
-        "genre": "Animation, Adventure, Comedy",
+        "genre": "Animation",
         "image": "https://i.pinimg.com/564x/43/81/29/438129a06f5c67c900a607b54e3dafeb.jpg"
     },
     {
         
         "title": "The Exorcist: Believer",
         "year": 2023,
-        "genre": "Horror, Mystery, Thriller",
+        "genre": "Horror",
         "image": "https://i.goojara.to/mb_229_229099.jpg"
     },
     {
         
         "title": "Shazam! Fury of the Gods",
         "year": 2023,
-        "genre": "Action, Adventure, Comedy",
+        "genre": "Action",
         "image": "https://i.pinimg.com/564x/ae/91/1b/ae911b0a601e99b1482a01ffaab20da2.jpg"
     },
     {
         
         "title": "Scream VI",
         "year": 2023,
-        "genre": "Horror, Mystery, Thriller",
+        "genre": "Horror",
         "image": "https://i.pinimg.com/564x/2d/b8/40/2db840114ea6e2aa85f3235afc69536e.jpg"
     },
     {
         
         "title": "Evil Dead Rise",
         "year": 2023,
-        "genre": "Horror, Thriller",
+        "genre": "Horror",
         "image": "https://i.pinimg.com/564x/b5/96/9f/b5969f831d59dfff730c57dbaf83dbc2.jpg"
     },
     {
         
         "title": "Blue Beetle",
         "year": 2023,
-        "genre": "Action, Adventure, Sci-Fi",
+        "genre": "Action",
         "image": "https://i.pinimg.com/564x/52/b4/63/52b463a7135e06f0d55d0d81bd56d0dc.jpg"
     },
     {
@@ -297,28 +297,28 @@ def insert_initial_movies():
         
         "title": "Haunted Mansion",
         "year": 2023,
-        "genre": "Comedy, Drama, Family",
+        "genre": "Comedy",
         "image": "https://i.pinimg.com/564x/91/09/4b/91094b24696bfdc14fd40f3c322ca94a.jpg"
     },
     {
         
         "title": "Insidious: The Red Door",
         "year": 2023,
-        "genre": "Horror, Mystery, Thriller",
+        "genre": "Horror",
         "image": "https://i.pinimg.com/564x/8d/1b/75/8d1b7570d37ace4090d6f232fd9c9246.jpg"
     },
     {
         
         "title": "The Nun II",
         "year": 2023,
-        "genre": "Horror, Mystery, Thriller",
+        "genre": "Horror",
         "image": "https://i.pinimg.com/564x/b6/7c/a5/b67ca574aaaab20328f10a25e8dcbb2f.jpg"
     },
     {
         
         "title": "The Equalizer 3",
         "year": 2023,
-        "genre": "Action, Crime, Thriller",
+        "genre": "Thriller",
         "image": "https://i.pinimg.com/564x/79/5e/99/795e99cbd5181fdf2ed80bb3f13bd6c2.jpg"
     },
     {
